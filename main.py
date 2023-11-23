@@ -17,8 +17,8 @@ def checkSettings():
     return input("""
                  Introduzca la IP o host del objetivo, esto solo debera hacerlo una vez.
                  En caso de querer cambiarlo, elimine el archivo settings.ini, 
-                 y vuelva a inicar la aplicacion: \n\n
-                 """)
+                 y vuelva a inicar la aplicacion, o solamente cambielo en dicho archivo\n\n
+                 Host/IP: """)
 
 def saveSettings():
 
