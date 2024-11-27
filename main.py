@@ -55,13 +55,12 @@ def detect():
 
         signal = ping(ip, verbose=True)
 
-        if signal.success() is True:
-            sound = pg.mixer.Sound("./utils/success.mp3")
-            pg.mixer.Sound.play(sound)
-            messagebox.showinfo(title="¡Atencion!", message=f"El usuario: {ip} se ha conectado")
-            break
-        else:
+        if not signal.success():
             continue
+        sound = pg.mixer.Sound("./utils/success.mp3")
+        pg.mixer.Sound.play(sound)
+        messagebox.showinfo(title="¡Atencion!", message=f"El usuario: {ip} se ha conectado")
+        break
 
 
 if __name__ == "__main__":
